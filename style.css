@@ -1,0 +1,114 @@
+:root {
+  /* COLORS */
+
+  --yellow: #f4d04e;
+
+  --gray-950: #111111;
+  --gray-500: #6b6b6b;
+
+  --white: #ffffff;
+
+  /* TYPOGRAPHY */
+  --font-family: Figtree, serif;
+
+  --extra-bold: 800;
+  --medium: 500;
+
+  --line-height: 150%;
+
+  --text-xl: var(--extra-bold) 1.5rem / var(--line-height) var(--font-family);
+  --text-md: var(--medium) 1rem / var(--line-height) var(--font-family);
+  --text-sm: var(--medium) 0.875rem / var(--line-height) var(--font-family);
+  --text-sm-b: var(--extra-bold) 0.875rem / var(--line-height)
+    var(--font-family);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: var(--gray-950);
+}
+
+span {
+  font: var(--text-sm-b);
+}
+
+body {
+  background-color: var(--yellow);
+  margin-inline: 1.5rem;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & main {
+    border-radius: 1.25rem;
+    background-color: var(--white);
+    border: 1px solid var(--gray-950);
+    box-shadow: 0.5rem 0.5rem 0 0 #000;
+
+    max-width: 24rem;
+    min-width: 20rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    & .image {
+      overflow: hidden;
+      display: flex;
+      border-radius: 0.625rem;
+
+      & img {
+        width: 100%;
+        align-self: stretch;
+      }
+    }
+
+    & .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+
+      & .category {
+        background-color: var(--yellow);
+        border-radius: 0.25rem;
+        padding: 0.25rem 0.75rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      & small {
+        font: var(--text-sm);
+      }
+
+      & h1 {
+        font: var(--text-xl);
+
+        &:hover,
+        &:focus {
+          color: var(--yellow);
+          cursor: pointer;
+        }
+      }
+
+      & p {
+        font: var(--text-md);
+        color: var(--gray-500);
+      }
+    }
+
+    & footer {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+  }
+}
